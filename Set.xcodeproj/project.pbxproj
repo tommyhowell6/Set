@@ -12,6 +12,9 @@
 		1111B5A021324ACE007B613C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1111B59E21324ACE007B613C /* Main.storyboard */; };
 		1111B5A221324ACF007B613C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1111B5A121324ACF007B613C /* Assets.xcassets */; };
 		1111B5A521324ACF007B613C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1111B5A321324ACF007B613C /* LaunchScreen.storyboard */; };
+		1111B5AF21324D9B007B613C /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111B5AE21324D9B007B613C /* Set.swift */; };
+		1111B5B121324EC1007B613C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111B5B021324EC1007B613C /* Card.swift */; };
+		113382F82154329200D0B7EE /* CardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113382F72154329200D0B7EE /* CardButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		1111B5A121324ACF007B613C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1111B5A421324ACF007B613C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1111B5A621324ACF007B613C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1111B5AE21324D9B007B613C /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
+		1111B5B021324EC1007B613C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		113382F72154329200D0B7EE /* CardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,9 @@
 		1111B59921324ACD007B613C /* Set */ = {
 			isa = PBXGroup;
 			children = (
+				1111B5AE21324D9B007B613C /* Set.swift */,
+				1111B5B021324EC1007B613C /* Card.swift */,
+				113382F72154329200D0B7EE /* CardButton.swift */,
 				1111B59A21324ACD007B613C /* AppDelegate.swift */,
 				1111B59C21324ACE007B613C /* ViewController.swift */,
 				1111B59E21324ACE007B613C /* Main.storyboard */,
@@ -96,6 +105,7 @@
 				TargetAttributes = {
 					1111B59621324ACD007B613C = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -137,6 +147,9 @@
 			files = (
 				1111B59D21324ACE007B613C /* ViewController.swift in Sources */,
 				1111B59B21324ACD007B613C /* AppDelegate.swift in Sources */,
+				1111B5AF21324D9B007B613C /* Set.swift in Sources */,
+				1111B5B121324EC1007B613C /* Card.swift in Sources */,
+				113382F82154329200D0B7EE /* CardButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +293,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 557V438TTQ;
 				INFOPLIST_FILE = Set/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -288,7 +303,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = TJH.Set;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE_SPECIFIER = ttoocool;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -297,7 +313,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 557V438TTQ;
 				INFOPLIST_FILE = Set/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,7 +323,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = TJH.Set;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE_SPECIFIER = ttoocool;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

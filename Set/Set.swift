@@ -86,7 +86,7 @@ class Set{
         {
             if selectedCards[selectedCardsIndex] == cardsInPlay[cardsInPlayIndex]
             {
-                //maybe unselect
+                //unselect
                 selectedCards.remove(at: selectedCardsIndex)
                 return
             }

@@ -54,23 +54,23 @@ class ViewController: UIViewController {
         cardButton.isHidden = false
         cardButton.isEnabled = true
         cardButton.isBlankCard = false
-//        cardButton.isHint = false
+        cardButton.cardSelected = game.cardIsSelected(card: card)
         cardButton.color = colors[card.color]
         cardButton.symbol = card.symbol
         cardButton.style = card.shade
         cardButton.number = card.number
         
-        cardButton.layer.borderWidth = 2.0
-        cardButton.layer.borderColor = UIColor.blue.cgColor
-        cardButton.layer.cornerRadius = 5.0
-        if game.cardIsSelected(card: card)
-        {
-            cardButton.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
-        }
-        else
-        {
-            cardButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
-        }
+//        cardButton.layer.borderWidth = 2.0
+//        cardButton.layer.borderColor = UIColor.blue.cgColor
+//        cardButton.layer.cornerRadius = 5.0
+//        if game.cardIsSelected(card: card)
+//        {
+//            cardButton.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+//        }
+//        else
+//        {
+//            cardButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+//        }
     }
     
     @IBAction func startGameButtonPressed(_ sender: Any) {
@@ -112,6 +112,10 @@ class ViewController: UIViewController {
             {
                 cardButtons[hint!].isHint = true
                 hintButton.isEnabled = false
+            } else {
+                for cardButton in cardButtons {
+                    cardButton.isHint = false
+                }
             }
         }
         else

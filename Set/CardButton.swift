@@ -23,6 +23,8 @@ class CardButton: UIButton {
     var isBlankCard: Bool = false { didSet { setNeedsDisplay(); setNeedsLayout() } }
     @IBInspectable
     var isHint: Bool = false { didSet { setNeedsDisplay(); setNeedsLayout() } }
+    @IBInspectable
+    var cardSelected: Bool = false { didSet { setNeedsDisplay(); setNeedsLayout() } }
     
     static func == (left: CardButton, right: CardButton) -> Bool
     {
@@ -33,11 +35,24 @@ class CardButton: UIButton {
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
         // Drawing code
-        let path = UIBezierPath()
-        let offsetForThreeShapes = bounds.width/18
         if isBlankCard {
             return
         }
+        let path = UIBezierPath()
+        let offsetForThreeShapes = bounds.width/18
+        let border = UIBezierPath(roundedRect: bounds, cornerRadius: 5.0)
+        border.lineWidth = 2.0
+        
+        if cardSelected {
+            #colorLiteral(red: 0.5194903016, green: 0.9142541289, blue: 0.7371789217, alpha: 1).setFill()
+            border.fill()
+        } else {
+            #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0).setFill()
+            border.fill()
+        }
+        UIColor.blue.setStroke()
+        border.stroke()
+        
         if isHint {
             let hint = UIBezierPath(arcCenter: CGPoint(x: bounds.width/12, y: bounds.height * (6/7)),
                                     radius: bounds.width/36,
@@ -47,6 +62,7 @@ class CardButton: UIButton {
             UIColor.red.setFill()
             hint.fill()
         }
+        
         if symbol == 0 {
             if number == 0 {
                 path.addArc(withCenter: CGPoint(x: bounds.width/2, y: bounds.height/2), radius: bounds.width/8, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)

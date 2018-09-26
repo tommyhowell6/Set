@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SetViewController: UIViewController {
     
     
     @IBOutlet var cardButtons: [CardButton]!
@@ -23,8 +23,6 @@ class ViewController: UIViewController {
     }
     
     private var game = Set()
-    
-    let colors = [#colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1),#colorLiteral(red: 0.04873471707, green: 0.1469966173, blue: 0.2019610107, alpha: 1),#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)]
 
     @IBOutlet weak var dealButton: UIButton!
     
@@ -55,7 +53,7 @@ class ViewController: UIViewController {
         cardButton.isEnabled = true
         cardButton.isBlankCard = false
         cardButton.cardSelected = game.cardIsSelected(card: card)
-        cardButton.color = colors[card.color]
+        cardButton.color = SettingsSingleton.settingsSingleton.getColors()[card.color]
         cardButton.symbol = card.symbol
         cardButton.style = card.shade
         cardButton.number = card.number

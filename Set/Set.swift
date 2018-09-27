@@ -100,6 +100,8 @@ class Set{
             {
                 print("you found a set")
                 replaceCardsWithBlanks()
+            } else {
+                bonusPoints -= 1
             }
             selectedCards = [Card]()
         }

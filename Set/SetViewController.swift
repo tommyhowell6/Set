@@ -77,6 +77,7 @@ class SetViewController: UIViewController {
     
     @IBAction func startGameButtonPressed(_ sender: Any) {
         startGameButton.isHidden = true
+        game = Set()
         game.start()
         dealButton.isHidden = false
         dealButton.isEnabled = true
@@ -123,6 +124,11 @@ class SetViewController: UIViewController {
         else
         {
             hintButton.isHidden = true
+            if game.isOutOfCards() {
+                //Game is over
+                dealButton.isHidden = true
+                startGameButton.isHidden = false
+            }
         }
     }
     

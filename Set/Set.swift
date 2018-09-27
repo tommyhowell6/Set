@@ -10,9 +10,9 @@ import Foundation
 
 class Set{
     
-    let isTest = false
+    let isTest = true
 
-    private var cards = [Card]()
+    private var cardsLeftInDeck = [Card]()
     private let numberOfCardsAtStart = 12
     private var cardsInPlay = [Card]()
     private var selectedCards = [Card]()
@@ -31,14 +31,14 @@ class Set{
             for symbol in 0..<3 {
                 for shade in 0..<3 {
                     for number in 0..<3 {
-                        cards.append(Card(color: color, symbol: symbol, shade: shade, number: number))
+                        cardsLeftInDeck.append(Card(color: color, symbol: symbol, shade: shade, number: number))
                     }
                 }
             }
         }
-        var last = cards.count - 1
+        var last = cardsLeftInDeck.count - 1
         while last > 0 {
-            cards.swapAt(last, last.arc4random)
+            cardsLeftInDeck.swapAt(last, last.arc4random)
             last -= 1
         }
     }
@@ -48,8 +48,8 @@ class Set{
         var tempCards = [Card]()
         for _ in 0..<nubmerOfCards
         {
-            if cards.count > 0 {
-                let card = cards.removeFirst()
+            if cardsLeftInDeck.count > 0 {
+                let card = cardsLeftInDeck.removeFirst()
                 cardsToReturn.append(card)
                 tempCards.append(card)
             }
@@ -72,8 +72,8 @@ class Set{
     func start() {
         for _ in 0..<numberOfCardsAtStart
         {
-            if cards.count > 0 {
-                let card = cards.removeFirst()
+            if cardsLeftInDeck.count > 0 {
+                let card = cardsLeftInDeck.removeFirst()
                 cardsInPlay.append(card)
             }
         }
@@ -225,6 +225,10 @@ class Set{
             return hintCardIndices[hintCardIndices.count.arc4random]
         }
         return nil
+    }
+    
+    func isOutOfCards() -> Bool {
+        return cardsLeftInDeck.count < 1
     }
     
 }

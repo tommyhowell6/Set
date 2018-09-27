@@ -146,6 +146,12 @@ class CardButton: UIButton {
         }
         path.addClip()
         color.setStroke()
+        
+        if style == 2 {
+            path.lineWidth = 3.0
+        } else {
+            path.lineWidth = 2.0
+        }
         path.stroke()
         if style == 0 {
             color.setFill()

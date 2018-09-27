@@ -10,7 +10,7 @@ import Foundation
 
 class Set{
     
-    let isTest = true
+    let isTest = false
 
     private var cardsLeftInDeck = [Card]()
     private let numberOfCardsAtStart = 12
@@ -70,6 +70,7 @@ class Set{
     }
     
     func start() {
+        
         for _ in 0..<numberOfCardsAtStart
         {
             if cardsLeftInDeck.count > 0 {

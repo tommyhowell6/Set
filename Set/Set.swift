@@ -231,7 +231,11 @@ class Set{
     }
     
     func isOutOfCards() -> Bool {
-        return cardsLeftInDeck.count < 1
+        if cardsLeftInDeck.count < 1 {
+            bonusPoints += (24 - numberOfNonBlankCardsInPlay()) * 2
+            return true
+        }
+        return false
     }
     
 }

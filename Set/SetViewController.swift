@@ -30,6 +30,10 @@ class SetViewController: UIViewController {
     
     @IBOutlet weak var startGameButton: UIButton!
     
+    override func viewDidAppear(_ animated: Bool) {
+        updateViewFromModel()
+    }
+    
     fileprivate func setBlankCard(_ button: CardButton) {
         button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
         button.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)

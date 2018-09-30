@@ -19,7 +19,6 @@
 		11338302215B0A7100D0B7EE /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11338301215B0A7100D0B7EE /* ColorPickerViewController.swift */; };
 		11338304215B0A7A00D0B7EE /* colorPalette.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11338303215B0A7A00D0B7EE /* colorPalette.plist */; };
 		11338306215B329800D0B7EE /* SettingsSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11338305215B329800D0B7EE /* SettingsSingleton.swift */; };
-		113383082161810100D0B7EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 113383072161810000D0B7EE /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +36,6 @@
 		11338301215B0A7100D0B7EE /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		11338303215B0A7A00D0B7EE /* colorPalette.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = colorPalette.plist; sourceTree = "<group>"; };
 		11338305215B329800D0B7EE /* SettingsSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSingleton.swift; sourceTree = "<group>"; };
-		113383072161810000D0B7EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +79,6 @@
 				1111B59E21324ACE007B613C /* Main.storyboard */,
 				1111B5A121324ACF007B613C /* Assets.xcassets */,
 				1111B5A321324ACF007B613C /* LaunchScreen.storyboard */,
-				113383072161810000D0B7EE /* GoogleService-Info.plist */,
 				11338303215B0A7A00D0B7EE /* colorPalette.plist */,
 				1111B5A621324ACF007B613C /* Info.plist */,
 			);
@@ -149,7 +146,6 @@
 			files = (
 				1111B5A521324ACF007B613C /* LaunchScreen.storyboard in Resources */,
 				1111B5A221324ACF007B613C /* Assets.xcassets in Resources */,
-				113383082161810100D0B7EE /* GoogleService-Info.plist in Resources */,
 				11338304215B0A7A00D0B7EE /* colorPalette.plist in Resources */,
 				1111B5A021324ACE007B613C /* Main.storyboard in Resources */,
 			);

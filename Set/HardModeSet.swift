@@ -9,5 +9,11 @@
 import Foundation
 
 class HardModeSet: Set {
-    
+    override func deal(nubmerOfCards: Int) -> [Card] {
+        var cardsToReturn = [Card]()
+        if !hasSetInPlay() {
+            cardsToReturn = super.deal(nubmerOfCards: nubmerOfCards)
+        }
+        return cardsToReturn
+    }
 }

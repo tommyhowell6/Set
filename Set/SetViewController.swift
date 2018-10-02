@@ -80,7 +80,11 @@ class SetViewController: UIViewController {
     
     @IBAction func startGameButtonPressed(_ sender: Any) {
         startGameButton.isHidden = true
-        game = Set()
+        if anxietyModeSwitch.isOn{
+            game = HardModeSet()
+        } else {
+            game = Set()
+        }
         game!.start()
         dealButton.isHidden = false
         dealButton.isEnabled = true

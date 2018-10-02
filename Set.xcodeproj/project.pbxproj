@@ -19,6 +19,8 @@
 		11338302215B0A7100D0B7EE /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11338301215B0A7100D0B7EE /* ColorPickerViewController.swift */; };
 		11338304215B0A7A00D0B7EE /* colorPalette.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11338303215B0A7A00D0B7EE /* colorPalette.plist */; };
 		11338306215B329800D0B7EE /* SettingsSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11338305215B329800D0B7EE /* SettingsSingleton.swift */; };
+		1133830C2162BCA800D0B7EE /* HighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133830B2162BCA800D0B7EE /* HighScoreViewController.swift */; };
+		1133830E2162F92800D0B7EE /* HardModeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133830D2162F92800D0B7EE /* HardModeSet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		11338301215B0A7100D0B7EE /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		11338303215B0A7A00D0B7EE /* colorPalette.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = colorPalette.plist; sourceTree = "<group>"; };
 		11338305215B329800D0B7EE /* SettingsSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSingleton.swift; sourceTree = "<group>"; };
+		1133830B2162BCA800D0B7EE /* HighScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreViewController.swift; sourceTree = "<group>"; };
+		1133830D2162F92800D0B7EE /* HardModeSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardModeSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,11 +73,13 @@
 			isa = PBXGroup;
 			children = (
 				1111B5AE21324D9B007B613C /* Set.swift */,
+				1133830D2162F92800D0B7EE /* HardModeSet.swift */,
 				1111B5B021324EC1007B613C /* Card.swift */,
 				113382F72154329200D0B7EE /* CardButton.swift */,
 				1111B59A21324ACD007B613C /* AppDelegate.swift */,
 				1111B59C21324ACE007B613C /* SetViewController.swift */,
 				113382FB215AE4D400D0B7EE /* SettingsViewController.swift */,
+				1133830B2162BCA800D0B7EE /* HighScoreViewController.swift */,
 				11338301215B0A7100D0B7EE /* ColorPickerViewController.swift */,
 				11338305215B329800D0B7EE /* SettingsSingleton.swift */,
 				1111B59E21324ACE007B613C /* Main.storyboard */,
@@ -164,8 +170,10 @@
 				11338302215B0A7100D0B7EE /* ColorPickerViewController.swift in Sources */,
 				1111B5B121324EC1007B613C /* Card.swift in Sources */,
 				113382F82154329200D0B7EE /* CardButton.swift in Sources */,
+				1133830E2162F92800D0B7EE /* HardModeSet.swift in Sources */,
 				11338306215B329800D0B7EE /* SettingsSingleton.swift in Sources */,
 				113382FC215AE4D400D0B7EE /* SettingsViewController.swift in Sources */,
+				1133830C2162BCA800D0B7EE /* HighScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

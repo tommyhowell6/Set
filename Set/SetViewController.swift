@@ -22,8 +22,11 @@ class SetViewController: UIViewController {
         return nil
     }
     
-    private var game = Set()
-
+    private var game: Set?
+    
+    @IBOutlet weak var anxietyModeSwitch: UISwitch!
+    @IBOutlet weak var anxietyModeTextField: UITextField!
+    
     @IBOutlet weak var dealButton: UIButton!
     
     @IBOutlet weak var scoreLabel: UILabel!
@@ -56,7 +59,7 @@ class SetViewController: UIViewController {
         cardButton.isHidden = false
         cardButton.isEnabled = true
         cardButton.isBlankCard = false
-        cardButton.cardSelected = game.cardIsSelected(card: card)
+        cardButton.cardSelected = game!.cardIsSelected(card: card)
         cardButton.color = SettingsSingleton.settingsSingleton.getColors()[card.color]
         cardButton.symbol = card.symbol
         cardButton.style = card.shade
@@ -78,9 +81,11 @@ class SetViewController: UIViewController {
     @IBAction func startGameButtonPressed(_ sender: Any) {
         startGameButton.isHidden = true
         game = Set()
-        game.start()
+        game!.start()
         dealButton.isHidden = false
         dealButton.isEnabled = true
+        anxietyModeSwitch.isHidden = true
+        anxietyModeTextField.isHidden = true
         updateViewFromModel()
     }
     
@@ -88,27 +93,27 @@ class SetViewController: UIViewController {
         print("in cardButtonTouched")
         if let cardNumber = cardButtons.index(of: sender) {
             print("card \(cardNumber)")
-            game.chooseCard(at: cardNumber)
+            game!.chooseCard(at: cardNumber)
             updateViewFromModel()
         } else {
             print("chosen card not in cardButtons")
         }
     }
     func updateViewFromModel(hint: Int? = nil){
-        let cards = game.getCardsInPlay()
-        scoreLabel.text = "Score: \(game.score)"
-        for index in cardButtons.indices
-        {
-            let button = cardButtons[index]
-            if cards.count > index
+        if let currentGame = game {
+            let cards = currentGame.getCardsInPlay()
+            scoreLabel.text = "Score: \(currentGame.score)"
+            for index in cardButtons.indices
             {
-                setButtonWithCard(cardButton: button, card: cards[index])
-            } else {
-                setBlankCard(button)
+                let button = cardButtons[index]
+                if cards.count > index
+                {
+                    setButtonWithCard(cardButton: button, card: cards[index])
+                } else {
+                    setBlankCard(button)
+                }
             }
-        }
-        if game.hasSetInPlay()
-        {
+            
             hintButton.isHidden = false
             hintButton.isEnabled = true
             if (hint != nil)
@@ -120,14 +125,13 @@ class SetViewController: UIViewController {
                     cardButton.isHint = false
                 }
             }
-        }
-        else
-        {
-            hintButton.isHidden = true
-            if game.isOutOfCards() {
+            
+            if currentGame.isOutOfCards() && !currentGame.hasSetInPlay() {
                 //Game is over
                 dealButton.isHidden = true
                 startGameButton.isHidden = false
+                anxietyModeSwitch.isHidden = false
+                anxietyModeTextField.isHidden = false
             }
         }
     }
@@ -146,8 +150,8 @@ class SetViewController: UIViewController {
     @IBAction func dealButtonPressed(_ sender: Any) {
         print("deal button pressed")
 //        dealButton.backgroundColor = colors[0]
-        if game.numberOfNonBlankCardsInPlay() < cardButtons.count {
-            let newCards = game.deal(nubmerOfCards: 3)
+        if game!.numberOfNonBlankCardsInPlay() < cardButtons.count {
+            let newCards = game!.deal(nubmerOfCards: 3)
             animateDrawCard(with: newCards)
             updateViewFromModel()
         }
@@ -157,7 +161,7 @@ class SetViewController: UIViewController {
     
     @IBAction func hintButtonPressed(_ sender: Any) {
         print("hint button pressed")
-        updateViewFromModel(hint: game.getHintIndex())
+        updateViewFromModel(hint: game!.getHintIndex())
     }
 }
 

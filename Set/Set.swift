@@ -20,8 +20,10 @@ class Set{
     private var numberOfHints = 0
     private var numberOfMatchedSets = 0
     private var bonusPoints = 0
+    private var wrongGuesses = 0
+
     var score: Int {
-        return numberOfMatchedSets * 4 + bonusPoints - numberOfHints
+        return numberOfMatchedSets * 4 + bonusPoints - numberOfHints - wrongGuesses
     }
     
     
@@ -101,7 +103,8 @@ class Set{
                 print("you found a set")
                 replaceCardsWithBlanks()
             } else {
-                bonusPoints -= 1
+                wrongGuesses -= 1
+                
             }
             selectedCards = [Card]()
         }
@@ -222,9 +225,9 @@ class Set{
     }
     
     func getHintIndex() -> Int? {
-        if hintCardIndices.count == 3
+        numberOfHints += 1
+        if hasSetInPlay()
         {
-            numberOfHints += 1
             return hintCardIndices[hintCardIndices.count.arc4random]
         }
         return nil

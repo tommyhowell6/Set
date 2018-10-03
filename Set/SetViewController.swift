@@ -33,6 +33,8 @@ class SetViewController: UIViewController {
     
     @IBOutlet weak var startGameButton: UIButton!
     
+    var gameTimer: Timer!
+    
     override func viewDidAppear(_ animated: Bool) {
         updateViewFromModel()
     }
@@ -65,23 +67,18 @@ class SetViewController: UIViewController {
         cardButton.style = card.shade
         cardButton.number = card.number
         
-//        cardButton.layer.borderWidth = 2.0
-//        cardButton.layer.borderColor = UIColor.blue.cgColor
-//        cardButton.layer.cornerRadius = 5.0
-//        if game.cardIsSelected(card: card)
-//        {
-//            cardButton.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
-//        }
-//        else
-//        {
-//            cardButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
-//        }
     }
     
     @IBAction func startGameButtonPressed(_ sender: Any) {
         startGameButton.isHidden = true
         if anxietyModeSwitch.isOn{
             game = HardModeSet()
+            gameTimer = Timer.scheduledTimer(
+                timeInterval: 15,
+                target: self,
+                selector: #selector(runTimedCode),
+                userInfo: nil,
+                repeats: true)
         } else {
             game = Set()
         }
@@ -90,6 +87,11 @@ class SetViewController: UIViewController {
         dealButton.isEnabled = true
         anxietyModeSwitch.isHidden = true
         anxietyModeTextField.isHidden = true
+        updateViewFromModel()
+    }
+    
+    @objc func runTimedCode() {
+        game?.addBonusPoints(add: -3)
         updateViewFromModel()
     }
     
@@ -103,6 +105,7 @@ class SetViewController: UIViewController {
             print("chosen card not in cardButtons")
         }
     }
+    
     func updateViewFromModel(hint: Int? = nil){
         if let currentGame = game {
             let cards = currentGame.getCardsInPlay()
@@ -132,6 +135,7 @@ class SetViewController: UIViewController {
             
             if currentGame.isOutOfCards() && !currentGame.hasSetInPlay() {
                 //Game is over
+                gameTimer.invalidate()
                 dealButton.isHidden = true
                 startGameButton.isHidden = false
                 anxietyModeSwitch.isHidden = false
@@ -165,7 +169,7 @@ class SetViewController: UIViewController {
     
     @IBAction func hintButtonPressed(_ sender: Any) {
         print("hint button pressed")
-        updateViewFromModel(hint: game!.getHintIndex())
+        updateViewFromModel(hint: game!.getRandomHintIndex())
     }
 }
 

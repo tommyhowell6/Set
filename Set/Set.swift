@@ -23,7 +23,7 @@ class Set{
     private var wrongGuesses = 0
 
     var score: Int {
-        return numberOfMatchedSets * 4 + bonusPoints - numberOfHints - wrongGuesses
+        return ((numberOfMatchedSets * 4) + bonusPoints) - (numberOfHints + wrongGuesses)
     }
     
     
@@ -103,7 +103,7 @@ class Set{
                 print("you found a set")
                 replaceCardsWithBlanks()
             } else {
-                wrongGuesses -= 1
+                wrongGuesses += 1
                 
             }
             selectedCards = [Card]()
@@ -224,7 +224,7 @@ class Set{
         return selectedCards.contains(card)
     }
     
-    func getHintIndex() -> Int? {
+    func getRandomHintIndex() -> Int? {
         numberOfHints += 1
         if hasSetInPlay()
         {
@@ -240,6 +240,12 @@ class Set{
         }
         return false
     }
+    
+    func addBonusPoints(add numberOfPoint: Int) {
+        bonusPoints += numberOfPoint
+    }
+    
+    @objc func runTimedCode(){}
     
 }
 

@@ -689,7 +689,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="54" height="31"/>
                                                 <color key="onTintColor" red="0.27843137254901962" green="0.55686274509803924" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </switch>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Anxiety Mode" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KoL-Fg-921">
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Anxiety Mode" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KoL-Fg-921">
                                                 <rect key="frame" x="60" y="0.0" width="126" height="31"/>
                                                 <color key="textColor" red="0.16862745100000001" green="0.4431372549" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>

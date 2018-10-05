@@ -35,6 +35,7 @@ class SetViewController: UIViewController {
     
     var gameTimer: Timer!
     
+    
     override func viewDidAppear(_ animated: Bool) {
         updateViewFromModel()
     }
@@ -79,6 +80,8 @@ class SetViewController: UIViewController {
                 selector: #selector(runTimedCode),
                 userInfo: nil,
                 repeats: true)
+            view.layer.borderWidth = 5
+            view.layer.borderColor = UIColor.red.cgColor
         } else {
             game = Set()
         }
@@ -91,7 +94,7 @@ class SetViewController: UIViewController {
     }
     
     @objc func runTimedCode() {
-        game?.addBonusPoints(add: -3)
+        game!.addBonusPoints(add: -3)
         updateViewFromModel()
     }
     

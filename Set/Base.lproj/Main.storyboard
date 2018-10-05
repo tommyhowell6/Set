@@ -20,13 +20,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JmQ-o1-TB4">
-                                <rect key="frame" x="20" y="162" width="374" height="476"/>
+                                <rect key="frame" x="20" y="222.66666666666663" width="374" height="355"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="inR-7e-mw3">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="52.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="52.333333333333336"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7sA-rd-CJh" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="52.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="52.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" priority="750" constant="500" id="Aa4-vE-46H"/>
                                                     <constraint firstAttribute="width" secondItem="7sA-rd-CJh" secondAttribute="height" multiplier="5:3" id="aeh-xh-MPm"/>
@@ -52,7 +52,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMM-b6-rto" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="95.666666666666686" y="0.0" width="87.333333333333314" height="52.666666666666664"/>
+                                                <rect key="frame" x="95.666666666666686" y="0.0" width="87.333333333333314" height="52.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="iMM-b6-rto" secondAttribute="height" multiplier="5:3" id="D9E-i1-YJo"/>
                                                 </constraints>
@@ -75,7 +75,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOg-jV-lza" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="191" y="0.0" width="87.666666666666686" height="52.666666666666664"/>
+                                                <rect key="frame" x="191" y="0.0" width="87.666666666666686" height="52.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="xOg-jV-lza" secondAttribute="height" multiplier="5:3" id="zEM-li-9Nc"/>
                                                 </constraints>
@@ -98,7 +98,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3OM-v6-9T4" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="286.66666666666669" y="0.0" width="87.333333333333314" height="52.666666666666664"/>
+                                                <rect key="frame" x="286.66666666666669" y="0.0" width="87.333333333333314" height="52.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="3OM-v6-9T4" secondAttribute="height" multiplier="5:3" id="g6Y-wr-h6c"/>
                                                 </constraints>
@@ -128,10 +128,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cbK-mq-gSH">
-                                        <rect key="frame" x="0.0" y="60.666666666666657" width="374" height="52.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="60.333333333333343" width="374" height="52.666666666666657"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewq-HK-G0o" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="52.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="52.666666666666664"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Ewq-HK-G0o" secondAttribute="height" multiplier="5:3" id="enV-oh-y7e"/>
                                                 </constraints>
@@ -154,7 +154,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrQ-Yu-U7o" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="95.666666666666686" y="0.0" width="87.333333333333314" height="52.333333333333336"/>
+                                                <rect key="frame" x="95.666666666666686" y="0.0" width="87.333333333333314" height="52.666666666666664"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="zrQ-Yu-U7o" secondAttribute="height" multiplier="5:3" id="WMH-Si-tjr"/>
                                                 </constraints>
@@ -177,7 +177,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0W5-B0-Rt4" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="191" y="0.0" width="87.666666666666686" height="52.333333333333336"/>
+                                                <rect key="frame" x="191" y="0.0" width="87.666666666666686" height="52.666666666666664"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="0W5-B0-Rt4" secondAttribute="height" multiplier="5:3" id="3ZU-Ql-8hP"/>
                                                 </constraints>
@@ -200,7 +200,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06C-VC-Eyp" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="286.66666666666669" y="0.0" width="87.333333333333314" height="52.333333333333336"/>
+                                                <rect key="frame" x="286.66666666666669" y="0.0" width="87.333333333333314" height="52.666666666666664"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="06C-VC-Eyp" secondAttribute="height" multiplier="5:3" id="LSC-kI-h1y"/>
                                                 </constraints>
@@ -230,10 +230,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vRY-fi-M4j">
-                                        <rect key="frame" x="0.0" y="121.00000000000001" width="374" height="52.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="121.00000000000001" width="374" height="52.333333333333329"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdG-YD-2rX" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="52.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="52.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="sdG-YD-2rX" secondAttribute="height" multiplier="5:3" id="8WC-CU-dC5"/>
                                                 </constraints>
@@ -256,7 +256,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zkc-h7-Eku" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="95.666666666666686" y="0.0" width="87.333333333333314" height="52.666666666666664"/>
+                                                <rect key="frame" x="95.666666666666686" y="0.0" width="87.333333333333314" height="52.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Zkc-h7-Eku" secondAttribute="height" multiplier="5:3" id="ES6-Wd-mbW"/>
                                                 </constraints>
@@ -279,7 +279,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0A-TL-ntF" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="191" y="0.0" width="87.666666666666686" height="52.666666666666664"/>
+                                                <rect key="frame" x="191" y="0.0" width="87.666666666666686" height="52.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="y0A-TL-ntF" secondAttribute="height" multiplier="5:3" id="enW-rc-Uxd"/>
                                                 </constraints>
@@ -302,7 +302,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGf-RW-y7Y" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="286.66666666666669" y="0.0" width="87.333333333333314" height="52.666666666666664"/>
+                                                <rect key="frame" x="286.66666666666669" y="0.0" width="87.333333333333314" height="52.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="rGf-RW-y7Y" secondAttribute="height" multiplier="5:3" id="c9f-z5-79H"/>
                                                 </constraints>
@@ -332,10 +332,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="c1L-cA-9KX">
-                                        <rect key="frame" x="0.0" y="181.66666666666669" width="374" height="52.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="181.33333333333334" width="374" height="52.666666666666657"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x22-7C-pek" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="52.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="52.666666666666664"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="x22-7C-pek" secondAttribute="height" multiplier="5:3" id="w2I-1D-u0T"/>
                                                 </constraints>
@@ -358,7 +358,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tul-rH-xeN" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="95.666666666666686" y="0.0" width="87.333333333333314" height="52.333333333333336"/>
+                                                <rect key="frame" x="95.666666666666686" y="0.0" width="87.333333333333314" height="52.666666666666664"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="tul-rH-xeN" secondAttribute="height" multiplier="5:3" id="J5l-7r-c3A"/>
                                                 </constraints>
@@ -381,7 +381,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbs-ze-HNh" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="191" y="0.0" width="87.666666666666686" height="52.333333333333336"/>
+                                                <rect key="frame" x="191" y="0.0" width="87.666666666666686" height="52.666666666666664"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="nbs-ze-HNh" secondAttribute="height" multiplier="5:3" id="kic-UA-VNd"/>
                                                 </constraints>
@@ -404,7 +404,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyu-uk-thP" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="286.66666666666669" y="0.0" width="87.333333333333314" height="52.333333333333336"/>
+                                                <rect key="frame" x="286.66666666666669" y="0.0" width="87.333333333333314" height="52.666666666666664"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Vyu-uk-thP" secondAttribute="height" multiplier="5:3" id="RpK-lA-7Jd"/>
                                                 </constraints>
@@ -434,10 +434,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rlW-tZ-eP6">
-                                        <rect key="frame" x="0.0" y="241.99999999999997" width="374" height="52.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="242.00000000000003" width="374" height="52.333333333333343"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fl1-cY-Spn" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="52.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="52.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="fl1-cY-Spn" secondAttribute="height" multiplier="5:3" id="EZr-s5-v2i"/>
                                                 </constraints>
@@ -460,7 +460,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qef-jh-A95" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="95.666666666666686" y="0.0" width="87.333333333333314" height="52.666666666666664"/>
+                                                <rect key="frame" x="95.666666666666686" y="0.0" width="87.333333333333314" height="52.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Qef-jh-A95" secondAttribute="height" multiplier="5:3" id="AwO-SU-DPI"/>
                                                 </constraints>
@@ -483,7 +483,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oS4-rA-r2r" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="191" y="0.0" width="87.666666666666686" height="52.666666666666664"/>
+                                                <rect key="frame" x="191" y="0.0" width="87.666666666666686" height="52.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="oS4-rA-r2r" secondAttribute="height" multiplier="5:3" id="xBC-WY-e2p"/>
                                                 </constraints>
@@ -506,7 +506,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3c-pf-bLv" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="286.66666666666669" y="0.0" width="87.333333333333314" height="52.666666666666664"/>
+                                                <rect key="frame" x="286.66666666666669" y="0.0" width="87.333333333333314" height="52.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="i3c-pf-bLv" secondAttribute="height" multiplier="5:3" id="v9c-Oz-Du0"/>
                                                 </constraints>
@@ -534,12 +534,13 @@
                                             <constraint firstItem="oS4-rA-r2r" firstAttribute="width" secondItem="oS4-rA-r2r" secondAttribute="height" multiplier="5:3" id="adS-wu-47l"/>
                                             <constraint firstItem="i3c-pf-bLv" firstAttribute="width" secondItem="i3c-pf-bLv" secondAttribute="height" multiplier="5:3" id="u4p-tJ-qVq"/>
                                         </constraints>
+                                        <variation key="heightClass=compact" hidden="NO"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wkZ-IB-WgC">
-                                        <rect key="frame" x="0.0" y="302.66666666666669" width="374" height="52.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="302.33333333333337" width="374" height="52.666666666666686"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yeo-ya-zZk" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="52.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="52.666666666666664"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Yeo-ya-zZk" secondAttribute="height" multiplier="5:3" id="MFv-q4-8gS"/>
                                                 </constraints>
@@ -562,7 +563,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CE2-kr-3Yp" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="95.666666666666686" y="0.0" width="87.333333333333314" height="52.333333333333336"/>
+                                                <rect key="frame" x="95.666666666666686" y="0.0" width="87.333333333333314" height="52.666666666666664"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="CE2-kr-3Yp" secondAttribute="height" multiplier="5:3" id="YVx-kw-rpE"/>
                                                 </constraints>
@@ -585,7 +586,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kxr-GT-u8J" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="191" y="0.0" width="87.666666666666686" height="52.333333333333336"/>
+                                                <rect key="frame" x="191" y="0.0" width="87.666666666666686" height="52.666666666666664"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Kxr-GT-u8J" secondAttribute="height" multiplier="5:3" id="iYk-pc-nAX"/>
                                                 </constraints>
@@ -608,7 +609,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="538-vq-ZYf" customClass="CardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="286.66666666666669" y="0.0" width="87.333333333333314" height="52.333333333333336"/>
+                                                <rect key="frame" x="286.66666666666669" y="0.0" width="87.333333333333314" height="52.666666666666664"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="538-vq-ZYf" secondAttribute="height" multiplier="5:3" id="4Zn-We-axa"/>
                                                 </constraints>
@@ -636,12 +637,18 @@
                                             <constraint firstItem="538-vq-ZYf" firstAttribute="width" secondItem="538-vq-ZYf" secondAttribute="height" multiplier="5:3" id="8rY-0O-mlE"/>
                                             <constraint firstItem="CE2-kr-3Yp" firstAttribute="width" secondItem="CE2-kr-3Yp" secondAttribute="height" multiplier="5:3" id="E3f-lG-dG7"/>
                                         </constraints>
+                                        <variation key="heightClass=compact" hidden="NO"/>
                                     </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LqM-by-SdN" userLabel="Info Stack View">
+                                <rect key="frame" x="78" y="585.66666666666663" width="258" height="68"/>
+                                <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="THi-7c-xCY">
-                                        <rect key="frame" x="0.0" y="363" width="374" height="52.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="258" height="30"/>
                                         <subviews>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gux-jB-hqz">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gux-jB-hqz">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
                                                 <state key="normal" title="Deal 3 more cards">
                                                     <color key="titleColor" red="0.16862745098039217" green="0.44313725490196076" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -649,8 +656,8 @@
                                                     <action selector="dealButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0AM-V1-0Me"/>
                                                 </connections>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vB-yx-7mc">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vB-yx-7mc">
+                                                <rect key="frame" x="133" y="0.0" width="125" height="30"/>
                                                 <state key="normal" title="Hint">
                                                     <color key="titleColor" red="0.16862745098039217" green="0.44313725490196076" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -661,14 +668,14 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGw-V7-dkC">
-                                        <rect key="frame" x="0.0" y="423.66666666666663" width="374" height="52.333333333333314"/>
+                                        <rect key="frame" x="92.666666666666657" y="38" width="72.666666666666657" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GVA-rC-gY9">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GVA-rC-gY9" userLabel="Start Stack View">
                                 <rect key="frame" x="10" y="349" width="394" height="102"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1v-4O-Yaw">
@@ -705,14 +712,43 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JmQ-o1-TB4" secondAttribute="trailing" constant="20" id="5uU-Hb-4CV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GVA-rC-gY9" secondAttribute="trailing" constant="10" id="6kh-yg-8Ku"/>
                             <constraint firstItem="JmQ-o1-TB4" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="AyH-vq-hyv"/>
+                            <constraint firstItem="LqM-by-SdN" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-12" id="Is8-r4-jiy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="JmQ-o1-TB4" secondAttribute="bottom" constant="20" id="MgL-00-Wlw"/>
+                            <constraint firstAttribute="trailing" secondItem="LqM-by-SdN" secondAttribute="trailing" constant="20" symbolic="YES" id="QJx-9V-vYK"/>
+                            <constraint firstItem="LqM-by-SdN" firstAttribute="leading" secondItem="JmQ-o1-TB4" secondAttribute="trailing" constant="8" symbolic="YES" id="Z6D-xC-eTF"/>
                             <constraint firstItem="JmQ-o1-TB4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cWy-TS-h7T"/>
                             <constraint firstItem="JmQ-o1-TB4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="elf-zU-Nkg"/>
+                            <constraint firstItem="LqM-by-SdN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fJW-Vt-0Ee"/>
+                            <constraint firstItem="LqM-by-SdN" firstAttribute="top" secondItem="JmQ-o1-TB4" secondAttribute="bottom" constant="8" symbolic="YES" id="kNu-ZX-BL7"/>
                             <constraint firstItem="GVA-rC-gY9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="n89-zF-2mG"/>
                             <constraint firstItem="GVA-rC-gY9" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="tBP-9c-rOp"/>
                             <constraint firstItem="JmQ-o1-TB4" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="xSD-vX-wmh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Is8-r4-jiy"/>
+                                <exclude reference="QJx-9V-vYK"/>
+                                <exclude reference="Z6D-xC-eTF"/>
+                                <exclude reference="fJW-Vt-0Ee"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="5uU-Hb-4CV"/>
+                                <exclude reference="6kh-yg-8Ku"/>
+                                <exclude reference="cWy-TS-h7T"/>
+                                <include reference="Is8-r4-jiy"/>
+                                <include reference="QJx-9V-vYK"/>
+                                <include reference="Z6D-xC-eTF"/>
+                                <exclude reference="kNu-ZX-BL7"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="fJW-Vt-0Ee"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="5m9-oE-jFt">
                         <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="ugS-7G-oMK">

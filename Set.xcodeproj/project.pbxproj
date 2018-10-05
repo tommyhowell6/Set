@@ -21,6 +21,8 @@
 		11338306215B329800D0B7EE /* SettingsSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11338305215B329800D0B7EE /* SettingsSingleton.swift */; };
 		1133830C2162BCA800D0B7EE /* HighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133830B2162BCA800D0B7EE /* HighScoreViewController.swift */; };
 		1133830E2162F92800D0B7EE /* HardModeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133830D2162F92800D0B7EE /* HardModeSet.swift */; };
+		114BDBC82165308D0054EA7D /* HighScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114BDBC72165308D0054EA7D /* HighScoreView.swift */; };
+		114BDBCA216532470054EA7D /* HighScoreLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114BDBC9216532470054EA7D /* HighScoreLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		11338305215B329800D0B7EE /* SettingsSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSingleton.swift; sourceTree = "<group>"; };
 		1133830B2162BCA800D0B7EE /* HighScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreViewController.swift; sourceTree = "<group>"; };
 		1133830D2162F92800D0B7EE /* HardModeSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardModeSet.swift; sourceTree = "<group>"; };
+		114BDBC72165308D0054EA7D /* HighScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreView.swift; sourceTree = "<group>"; };
+		114BDBC9216532470054EA7D /* HighScoreLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 				113382F72154329200D0B7EE /* CardButton.swift */,
 				1111B59A21324ACD007B613C /* AppDelegate.swift */,
 				1111B59C21324ACE007B613C /* SetViewController.swift */,
+				114BDBC72165308D0054EA7D /* HighScoreView.swift */,
+				114BDBC9216532470054EA7D /* HighScoreLabel.swift */,
 				113382FB215AE4D400D0B7EE /* SettingsViewController.swift */,
 				1133830B2162BCA800D0B7EE /* HighScoreViewController.swift */,
 				11338301215B0A7100D0B7EE /* ColorPickerViewController.swift */,
@@ -171,6 +177,8 @@
 				1111B5B121324EC1007B613C /* Card.swift in Sources */,
 				113382F82154329200D0B7EE /* CardButton.swift in Sources */,
 				1133830E2162F92800D0B7EE /* HardModeSet.swift in Sources */,
+				114BDBCA216532470054EA7D /* HighScoreLabel.swift in Sources */,
+				114BDBC82165308D0054EA7D /* HighScoreView.swift in Sources */,
 				11338306215B329800D0B7EE /* SettingsSingleton.swift in Sources */,
 				113382FC215AE4D400D0B7EE /* SettingsViewController.swift in Sources */,
 				1133830C2162BCA800D0B7EE /* HighScoreViewController.swift in Sources */,

@@ -14,6 +14,9 @@
 		1111B5A521324ACF007B613C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1111B5A321324ACF007B613C /* LaunchScreen.storyboard */; };
 		1111B5AF21324D9B007B613C /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111B5AE21324D9B007B613C /* Set.swift */; };
 		1111B5B121324EC1007B613C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111B5B021324EC1007B613C /* Card.swift */; };
+		1126B372216C5F9100992CE1 /* HighScoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1126B371216C5F9100992CE1 /* HighScoreService.swift */; };
+		1126B379216C79D800992CE1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1126B378216C79D800992CE1 /* Default-568h@2x.png */; };
+		1126B37D216C81C300992CE1 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1126B37C216C81C300992CE1 /* Score.swift */; };
 		113382F82154329200D0B7EE /* CardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113382F72154329200D0B7EE /* CardButton.swift */; };
 		113382FC215AE4D400D0B7EE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113382FB215AE4D400D0B7EE /* SettingsViewController.swift */; };
 		11338302215B0A7100D0B7EE /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11338301215B0A7100D0B7EE /* ColorPickerViewController.swift */; };
@@ -35,6 +38,9 @@
 		1111B5A621324ACF007B613C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1111B5AE21324D9B007B613C /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 		1111B5B021324EC1007B613C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		1126B371216C5F9100992CE1 /* HighScoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreService.swift; sourceTree = "<group>"; };
+		1126B378216C79D800992CE1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1126B37C216C81C300992CE1 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		113382F72154329200D0B7EE /* CardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardButton.swift; sourceTree = "<group>"; };
 		113382FB215AE4D400D0B7EE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		11338301215B0A7100D0B7EE /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +66,7 @@
 		1111B58E21324ACD007B613C = {
 			isa = PBXGroup;
 			children = (
+				1126B378216C79D800992CE1 /* Default-568h@2x.png */,
 				1111B59921324ACD007B613C /* Set */,
 				1111B59821324ACD007B613C /* Products */,
 			);
@@ -76,25 +83,67 @@
 		1111B59921324ACD007B613C /* Set */ = {
 			isa = PBXGroup;
 			children = (
-				1111B5AE21324D9B007B613C /* Set.swift */,
-				1133830D2162F92800D0B7EE /* HardModeSet.swift */,
-				1111B5B021324EC1007B613C /* Card.swift */,
-				113382F72154329200D0B7EE /* CardButton.swift */,
-				1111B59A21324ACD007B613C /* AppDelegate.swift */,
+				1111B5A621324ACF007B613C /* Info.plist */,
+				1126B374216C794A00992CE1 /* Model */,
+				1126B375216C796A00992CE1 /* View */,
+				1126B373216C78CB00992CE1 /* Controller */,
+				1126B376216C797D00992CE1 /* Networking */,
+				1126B377216C79A800992CE1 /* Supporting Files */,
+			);
+			path = Set;
+			sourceTree = "<group>";
+		};
+		1126B373216C78CB00992CE1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				1111B59C21324ACE007B613C /* SetViewController.swift */,
-				114BDBC72165308D0054EA7D /* HighScoreView.swift */,
-				114BDBC9216532470054EA7D /* HighScoreLabel.swift */,
 				113382FB215AE4D400D0B7EE /* SettingsViewController.swift */,
 				1133830B2162BCA800D0B7EE /* HighScoreViewController.swift */,
 				11338301215B0A7100D0B7EE /* ColorPickerViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1126B374216C794A00992CE1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1111B5AE21324D9B007B613C /* Set.swift */,
+				1133830D2162F92800D0B7EE /* HardModeSet.swift */,
+				1111B5B021324EC1007B613C /* Card.swift */,
+				1126B37C216C81C300992CE1 /* Score.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1126B375216C796A00992CE1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				113382F72154329200D0B7EE /* CardButton.swift */,
+				114BDBC72165308D0054EA7D /* HighScoreView.swift */,
+				114BDBC9216532470054EA7D /* HighScoreLabel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1126B376216C797D00992CE1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1126B371216C5F9100992CE1 /* HighScoreService.swift */,
 				11338305215B329800D0B7EE /* SettingsSingleton.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1126B377216C79A800992CE1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				1111B59E21324ACE007B613C /* Main.storyboard */,
+				1111B59A21324ACD007B613C /* AppDelegate.swift */,
 				1111B5A121324ACF007B613C /* Assets.xcassets */,
 				1111B5A321324ACF007B613C /* LaunchScreen.storyboard */,
 				11338303215B0A7A00D0B7EE /* colorPalette.plist */,
-				1111B5A621324ACF007B613C /* Info.plist */,
 			);
-			path = Set;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +208,7 @@
 				1111B5A521324ACF007B613C /* LaunchScreen.storyboard in Resources */,
 				1111B5A221324ACF007B613C /* Assets.xcassets in Resources */,
 				11338304215B0A7A00D0B7EE /* colorPalette.plist in Resources */,
+				1126B379216C79D800992CE1 /* Default-568h@2x.png in Resources */,
 				1111B5A021324ACE007B613C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1126B37D216C81C300992CE1 /* Score.swift in Sources */,
 				1111B59D21324ACE007B613C /* SetViewController.swift in Sources */,
 				1111B59B21324ACD007B613C /* AppDelegate.swift in Sources */,
 				1111B5AF21324D9B007B613C /* Set.swift in Sources */,
@@ -177,6 +228,7 @@
 				1111B5B121324EC1007B613C /* Card.swift in Sources */,
 				113382F82154329200D0B7EE /* CardButton.swift in Sources */,
 				1133830E2162F92800D0B7EE /* HardModeSet.swift in Sources */,
+				1126B372216C5F9100992CE1 /* HighScoreService.swift in Sources */,
 				114BDBCA216532470054EA7D /* HighScoreLabel.swift in Sources */,
 				114BDBC82165308D0054EA7D /* HighScoreView.swift in Sources */,
 				11338306215B329800D0B7EE /* SettingsSingleton.swift in Sources */,

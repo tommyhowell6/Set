@@ -870,6 +870,13 @@
                     <view key="view" contentMode="scaleToFill" id="y38-9k-LeB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="IYd-0F-ElQ">
+                                <rect key="frame" x="189" y="350" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.16862745100000001" green="0.4431372549" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="di3-0K-p0v"/>
                     </view>
@@ -880,10 +887,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="spinner" destination="IYd-0F-ElQ" id="2vW-Pa-tBH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvr-5G-OAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2635" y="377"/>
+            <point key="canvasLocation" x="2635" y="389"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1cu-bK-QVF">
@@ -2270,7 +2280,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T2i-Kz-OHA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1858" y="377"/>
+            <point key="canvasLocation" x="1858" y="389"/>
         </scene>
     </scenes>
     <resources>

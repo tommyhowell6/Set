@@ -10,6 +10,9 @@ import UIKit
 
 class HighScoreViewController: UIViewController {
 
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +21,26 @@ class HighScoreViewController: UIViewController {
     
     @IBAction func doneButtonTapped(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        spinner.startAnimating()
+        let id = 1
+        loadHighScores(id: id)
+    }
+    
+    let highScoreService = HighScoreServie()
+    
+    func loadHighScores(id: Int) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        highScoreService.getHighScoreResults(id: id) { results, errorMessage in
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            if let results = results {
+                print(results)
+            }
+            if !errorMessage.isEmpty { print("Search error: " + errorMessage) }
+        }
     }
 
     /*

@@ -26,17 +26,17 @@ class HighScoreViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         spinner.startAnimating()
-        let id = 1
-        loadHighScores(id: id)
+        loadHighScores()
     }
     
     let highScoreService = HighScoreServie()
     
-    func loadHighScores(id: Int) {
+    func loadHighScores() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        highScoreService.getHighScoreResults(id: id) { results, errorMessage in
+        highScoreService.getHighScoreResults() { results, errorMessage in
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
             if let results = results {
+                self.spinner?.stopAnimating()
                 print(results)
             }
             if !errorMessage.isEmpty { print("Search error: " + errorMessage) }

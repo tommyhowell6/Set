@@ -11,20 +11,24 @@ import Foundation
 class HighScoreServie {
     
     typealias JSONDictionary = [String: Any]
-    typealias QueryResult = ([Int]?, String) -> ()
+    typealias QueryResult = ([ScoreHolder]?, String) -> ()
     
     var errorMessage = ""
-    var tracks: [Int] = []
+    var highScores: [ScoreHolder] = []
     
     let defaultSession = URLSession(configuration: .default)
     var dataTask: URLSessionDataTask?
+    let addressForGet = "http://localhost:8080/set/scores"
+    let addressForPost = "http://localhost:8080/set/scores"
+    //            ec2-52-14-5-39.us-east-2.compute.amazonaws.com:8080
+
     
-    func getHighScoreResults(id: Int, completion: @escaping QueryResult) {
+    func getHighScoreResults(completion: @escaping QueryResult) {
         
         dataTask?.cancel()
         
-        if var urlComponents = URLComponents(string: "http://ec2-52-14-5-39.us-east-2.compute.amazonaws.com:8080/highScores") {
-            urlComponents.query = "id=\(id)"
+        if var urlComponents = URLComponents(string: addressForGet) {
+//            urlComponents.query = "id=\(id)" not setup for this now, use "/\(id)" in the path name
             
             guard let url = urlComponents.url else { return }
             print(url)
@@ -39,7 +43,7 @@ class HighScoreServie {
                     self.updateResults(data)
             
                     DispatchQueue.main.async {
-                        completion([0,0,0], self.errorMessage)
+                        completion(self.highScores, self.errorMessage)
                     }
                 }
             }
@@ -50,42 +54,70 @@ class HighScoreServie {
     }
     
     fileprivate func updateResults(_ data: Data) {
-        var response: JSONDictionary?
-        tracks.removeAll()
-        
         do {
-            response = try JSONSerialization.jsonObject(with: data, options: []) as? JSONDictionary
-        } catch let parseError as NSError {
-            errorMessage += "JSONSerialization error: \(parseError.localizedDescription)\n"
-            return
+            let scores = try JSONDecoder().decode([ScoreHolder].self, from: data)
+            highScores = scores
+            print(scores)
+        } catch let jsonErr {
+            print (jsonErr)
         }
-        print(response)
-        
-        guard let score: Score = Score(numberOfHints: (response!["numberOfHints"] as? Int)!,
-                                 numberOfMatchedSets: (response!["numberOfMatchedSets"] as? Int)!,
-                                 bonusPoints: (response!["bonusPoints"] as? Int)!,
-                                 wrongGuesses: (response!["wrongGuesses"] as? Int)!,
-                                 user: (response!["user"] as? String)!) else {
-                         errorMessage += "Unwrapping error\n"
+    }
+    
+    func postHighScore(score: Score) {
+        submitPost(post: score) { (error) in
+            if let error = error {
+                fatalError(error.localizedDescription)
+            }
         }
-        print(score)
-//        guard let array = response!["results"] as? [Any] else {
-//            errorMessage += "Dictionary does not contain results key\n"
-//            return
-//        }
-//        var index = 0
-//        for trackDictionary in array {
-//            if let trackDictionary = trackDictionary as? JSONDictionary,
-//                let previewURLString = trackDictionary["previewUrl"] as? String,
-//                let previewURL = URL(string: previewURLString),
-//                let name = trackDictionary["trackName"] as? String,
-//                let artist = trackDictionary["artistName"] as? String {
-//                tracks.append(0)
-//                index += 1
-//            } else {
-//                errorMessage += "Problem parsing trackDictionary\n"
-//            }
-//        }
+    }
+    
+    // We'll need a completion block that returns an error if we run into any problems
+    func submitPost(post: Score, completion:((Error?) -> Void)?) {
+        if let urlComponents = URLComponents(string: addressForPost)
+        {
+    //        urlComponents.scheme = "https"
+    //        urlComponents.host = "jsonplaceholder.typicode.com"
+    //        urlComponents.path = "/posts"
+            guard let url = urlComponents.url else { fatalError("Could not create URL from components") }
+            
+            // Specify this request as being a POST method
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            // Make sure that we include headers specifying that our request's HTTP body
+            // will be JSON encoded
+            var headers = request.allHTTPHeaderFields ?? [:]
+            headers["Content-Type"] = "application/json"
+            request.allHTTPHeaderFields = headers
+            
+            // Now let's encode out Post struct into JSON data...
+            let encoder = JSONEncoder()
+            do {
+                let jsonData = try encoder.encode(post)
+                // ... and set our request's HTTP body
+                request.httpBody = jsonData
+                print("jsonData: ", String(data: request.httpBody!, encoding: .utf8) ?? "no body data")
+            } catch {
+                completion?(error)
+            }
+            
+            // Create and run a URLSession data task with our JSON encoded POST request
+            let config = URLSessionConfiguration.default
+            let session = URLSession(configuration: config)
+            let task = session.dataTask(with: request) { (responseData, response, responseError) in
+                guard responseError == nil else {
+                    completion?(responseError!)
+                    return
+                }
+                
+                // APIs usually respond with the data you just sent in your POST request
+                if let data = responseData, let utf8Representation = String(data: data, encoding: .utf8) {
+                    print("response: ", utf8Representation)
+                } else {
+                    print("no readable data received in response")
+                }
+            }
+            task.resume()
+        }
     }
     
 }

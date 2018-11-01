@@ -10,7 +10,7 @@ import Foundation
 
 class Set{
     
-    let isTest = false
+    let isTest = true
 
     private var cardsLeftInDeck = [Card]()
     private let numberOfCardsAtStart = 12
@@ -22,11 +22,22 @@ class Set{
     private var bonusPoints = 0
     private var wrongGuesses = 0
 
-    var score: Int {
+    var scoreValue: Int {
         return ((numberOfMatchedSets * 4) + bonusPoints) - (numberOfHints + wrongGuesses)
     }
     
-    
+    func score(user: String) -> Score {
+        return (Score(numberOfHints: numberOfHints,
+                      numberOfMatchedSets: numberOfMatchedSets,
+                      bonusPoints: bonusPoints,
+                      wrongGuesses: wrongGuesses,
+                      user: user))
+    }
+//    let numberOfHints: Int
+//    let numberOfMatchedSets: Int
+//    let bonusPoints: Int
+//    let wrongGuesses:  Int
+//    let user: String
     
     init() {
         for color in 0..<3 {

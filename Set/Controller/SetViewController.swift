@@ -112,7 +112,7 @@ class SetViewController: UIViewController {
     func updateViewFromModel(hint: Int? = nil){
         if let currentGame = game {
             let cards = currentGame.getCardsInPlay()
-            scoreLabel.text = "Score: \(currentGame.score)"
+            scoreLabel.text = "Score: \(currentGame.scoreValue)"
             for index in cardButtons.indices
             {
                 let button = cardButtons[index]
@@ -138,13 +138,45 @@ class SetViewController: UIViewController {
             
             if currentGame.isOutOfCards() && !currentGame.hasSetInPlay() {
                 //Game is over
-                gameTimer.invalidate()
+                if anxietyModeSwitch.isOn {
+                    gameTimer.invalidate()
+                    let vc = promptForName()
+                    present(vc, animated: true, completion: nil)
+                }
                 dealButton.isHidden = true
                 startGameButton.isHidden = false
                 anxietyModeSwitch.isHidden = false
                 anxietyModeTextField.isHidden = false
             }
         }
+    }
+    
+    let highScoreService = HighScoreServie()
+    
+    private func promptForName() -> UIAlertController {
+        let prompt = UIAlertController(title: "Add To High Scores", message: nil, preferredStyle: .alert)
+        
+        prompt.addTextField {
+            $0.placeholder = "Name"
+        }
+        
+        
+        prompt.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        let create = UIAlertAction(title: "Submit", style: .default, handler: { [weak prompt, weak self] action in
+            guard self != nil else { return }
+            let tf = prompt?.textFields?[0]
+            guard let name = tf?.text else { return }
+            guard name.isEmpty == false else { return }
+            
+            //POST High Score
+            let score = self?.game?.score(user: name)
+            self?.highScoreService.postHighScore(score: score!)
+        })
+        prompt.addAction(create)
+        
+        return prompt
+        
     }
     
     func animateDrawCard(with cards: [Card]) {

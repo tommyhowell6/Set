@@ -26,6 +26,7 @@
 		1133830E2162F92800D0B7EE /* HardModeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133830D2162F92800D0B7EE /* HardModeSet.swift */; };
 		114BDBC82165308D0054EA7D /* HighScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114BDBC72165308D0054EA7D /* HighScoreView.swift */; };
 		114BDBCA216532470054EA7D /* HighScoreLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114BDBC9216532470054EA7D /* HighScoreLabel.swift */; };
+		11EF551B21815CB3000C16C4 /* ScoreHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EF551A21815CB3000C16C4 /* ScoreHolder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		1133830D2162F92800D0B7EE /* HardModeSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardModeSet.swift; sourceTree = "<group>"; };
 		114BDBC72165308D0054EA7D /* HighScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreView.swift; sourceTree = "<group>"; };
 		114BDBC9216532470054EA7D /* HighScoreLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreLabel.swift; sourceTree = "<group>"; };
+		11EF551A21815CB3000C16C4 /* ScoreHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreHolder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				1133830D2162F92800D0B7EE /* HardModeSet.swift */,
 				1111B5B021324EC1007B613C /* Card.swift */,
 				1126B37C216C81C300992CE1 /* Score.swift */,
+				11EF551A21815CB3000C16C4 /* ScoreHolder.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				114BDBCA216532470054EA7D /* HighScoreLabel.swift in Sources */,
 				114BDBC82165308D0054EA7D /* HighScoreView.swift in Sources */,
 				11338306215B329800D0B7EE /* SettingsSingleton.swift in Sources */,
+				11EF551B21815CB3000C16C4 /* ScoreHolder.swift in Sources */,
 				113382FC215AE4D400D0B7EE /* SettingsViewController.swift in Sources */,
 				1133830C2162BCA800D0B7EE /* HighScoreViewController.swift in Sources */,
 			);

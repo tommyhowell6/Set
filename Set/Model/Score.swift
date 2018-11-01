@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct Score {
+struct Score: Codable {
     
     let numberOfHints: Int
     let numberOfMatchedSets: Int

@@ -12,4 +12,5 @@ struct ScoreHolder: Decodable {
     var id: Int
     var user: String
     var score: Int
+    
 }

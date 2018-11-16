@@ -8,7 +8,12 @@
 
 import UIKit
 
-class HighScoreViewController: UIViewController {
+class HighScoreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
+    @IBOutlet weak var highScoreTableView: UITableView!
+    
+    private var highscores: [ScoreHolder]?
 
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
@@ -26,6 +31,7 @@ class HighScoreViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         spinner.startAnimating()
+        spinner.hidesWhenStopped = true
         loadHighScores()
     }
     
@@ -38,9 +44,23 @@ class HighScoreViewController: UIViewController {
             if let results = results {
                 self.spinner?.stopAnimating()
                 print(results)
+                self.highscores = results
+                self.highScoreTableView.reloadData()
             }
             if !errorMessage.isEmpty { print("Search error: " + errorMessage) }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return highscores?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "highScoreCell") as! HighScoreTableViewCell
+        cell.rank.text = String(indexPath.row + 1)
+        cell.name.text = highscores?[indexPath.row].user ?? "No Player"
+        cell.score.text = highscores?[indexPath.row].score.string ?? "?"
+        return cell
     }
 
     /*
@@ -53,4 +73,10 @@ class HighScoreViewController: UIViewController {
     }
     */
 
+}
+
+extension Int {
+    var string: String {
+        return String(self)
+    }
 }
